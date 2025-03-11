@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Add a moving star field to make it look trippy */
+@keyframes star-field {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background-image: url('https://wallpaperaccess.com/full/191194.jpg'), radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    animation: star-field 120s linear infinite;  /* Slow animation of background */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Button styling */
+  button {
+    background: linear-gradient(45deg, #00f, #0ff);
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  button:hover {
+    background: linear-gradient(45deg, #ff00ff, #ff9900);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+    transform: scale(1.1);
+  }
+  
+  /* Input field styling */
+  input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Styling the planet dropdown */
+select {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #00ffff;  /* Light cyan border for futuristic look */
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 20px;
+    width: 250px;  /* Make the dropdown a consistent size */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);  /* Glowing box shadow */
+    outline: none;
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+  }
+  
+  select:hover {
+    background-color: rgba(255, 255, 255, 0.3);  /* Slightly darker background on hover */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);  /* Brighter glowing shadow on hover */
+  }
+  
+  select:focus {
+    border-color: #ff00ff;  /* Change border color on focus (purple glow effect) */
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);  /* Purple glow around the dropdown */
+  }
+  
+  /* Styling the dropdown options */
+  option {
+    background-color: #1b1b2f;
+    color: white;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+  }
+  
+  option:hover {
+    background-color: #00ffff; /* Light cyan when hovering over options */
+  }
+  
+  /* Adding animation */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+    }
+    100% {
+      text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+    }
+  }
+  
+  /* Add glowing effect to the page title */
+  h1 {
+    font-size: 3em;
+    color: #fff;
+    animation: glow 1.5s infinite alternate;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* General styling for the container */
+  .container {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 30px 50px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
+  }
+  
+  /* A cool glowing border effect for the form */
+  form {
+    border: 2px solid #00ffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  }

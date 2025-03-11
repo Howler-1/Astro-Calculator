@@ -3,10 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Astro Weight Calculator</title>
+    
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
      <!-- Write your markup here  -->
-
+    <h1>Ad Astra per Aspera</h1>
+    <label for="user-weight">Enter your weight on Earth: (lbs)</label>
+    <input id="user-weight" type="text" placeholder="Weight (lbs)" />
+    
+    <label for="planets">Choose a planet: </label>
+    <select id="planets">
+      <!-- <option value="sun">Sun</option>
+      <option value="mercury">Mercury</option>
+      <option value="venus">Venus</option>
+      <option value="earth">Earth</option>
+      <option value="moon">Moon</option>
+      <option value="mars">Mars</option>
+      <option value="jupiter">Jupiter</option>
+      <option value="saturn">Saturn</option>
+      <option value="uranus">Uranus</option>
+      <option value="neptune">Neptune</option>
+      <option value="pluto">Pluto</option> -->
+    </select>
+    <p id="output"></p>
+    <button id="calculate-button">Calculate Weight</button>
+    
     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
